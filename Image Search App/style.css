@@ -9,7 +9,7 @@
 body{
       width: 100%;
       height: 100vh;
-      /* background-color: rgb(135, 138, 135); */
+      background-color: rgb(135, 138, 135);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,7 +23,7 @@ header{
 }
 
 header h1{
-      color: #767676;
+      color: #fff;
 }
 
 header form .search-container{
@@ -99,7 +99,6 @@ header form .search-container .ri-search-line{
 
 .imageDiv:hover .overlay h3{
       display: block;
-      
 }
 
      /* Responsive Code */
@@ -109,4 +108,33 @@ header form .search-container .ri-search-line{
             width: 80%;
       }
 
+}
+
+
+
+/* Additing style to load more button */
+
+.loadMoreBtn{     
+   border: none;
+   background-color: #65eb05;
+   color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+
+main section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px 0 50px 0;
+}
+
+.loadMoreBtn:hover{
+      background-color: #fff;
+      color: #111;
 }
