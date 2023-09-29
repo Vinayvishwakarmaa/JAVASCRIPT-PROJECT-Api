@@ -63,11 +63,14 @@ form button[type="submit"]{
       transition: background-color 0.2s ease-in-out;
 }
 
-form button[type="submit"]:hover,.recipe button:hover{
+form button[type="submit"]:hover,
+.recipe button:hover,
+.recipe-close-btn:hover{
      background-color: gray;
 }
 
-form button[type="submit"]:active,.recipe button:active{
+form button[type="submit"]:active,
+.recipe button:active{
       background-color: green;
       transition: background-color 0.2s;
  }
@@ -95,8 +98,13 @@ form button[type="submit"]:active,.recipe button:active{
   cursor: pointer;
   max-width: 350px;
   /* text-transform: uppercase; */
+  transition: transform 0.3s ease-in-out;
 }
  
+.recipe:hover{
+      transform: scale(1.02);
+}
+
 .recipe img{
       height: 300px;
 }
@@ -146,11 +154,79 @@ form button[type="submit"]:active,.recipe button:active{
       width: 40%;
       height: 60%;
       font-size: 20px;
-      
+      transition: all 0.5s ease-in-out;
+      overflow-y: scroll;
 }
 
 
+.recipe-details-content{
+      padding: 30px;
+}
 
+.recipeName{
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: underline;
+      
+}
+
+.ingredientsList  li{
+      margin-top: 10px;
+      margin-left: 20px;
+      /* line-height: 30px; */
+}
+
+ .recipeName,.ingredientsList,.recipeIngredients{
+      margin-bottom: 20px;
+ } 
+
+.recipeIngredients p{
+  line-height: 30px;
+  white-space: pre-line;
+}
+
+.recipe-close-btn{
+      border: none;
+     font-size: 18px;
+     padding: 8px;
+     border-radius: 4px; 
+     background-color: #f44336; 
+     color: #fff;
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     width: 30px;
+     height: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+
+/* Adding scroll bar to recipe details popup */
+
+
+.recipe-details::-webkit-scrollbar{
+ width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb{
+      background-color: grey;
+      border-radius: 16px;
+}
+
+
+body::-webkit-scrollbar{
+      width: 16px;
+     }
+
+     body::-webkit-scrollbar-thumb{
+      background-color: #a1a1aa;
+}
+
+body::-webkit-scrollbar-track{
+      background-color: #ebebeb;
+}
 /*  Reponsive Code */
 @media screen and (max-width: 600px) {
       header nav{
